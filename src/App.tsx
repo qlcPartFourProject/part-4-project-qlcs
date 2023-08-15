@@ -1,4 +1,4 @@
-import {  } from 'react'
+import { useEffect } from 'react'
 import { Box } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material'
 import { Routes, Route, Navigate } from 'react-router-dom'
@@ -10,6 +10,7 @@ import QuizPage from './pages/quiz/QuizPage'
 import SurveyPage from './pages/survey/SurveyPage'
 
 import useAos from './hooks/useAos'
+import axios from 'axios'
 
 const theme = createTheme({
   typography: {
@@ -26,6 +27,14 @@ const sx = {
 
 function App() {
   useAos()
+
+  useEffect(() => {
+    const getPokemonAsync = async () => {
+      const res = await axios.get('https://pokeapi.co/api/v2/pokemon');
+      console.log(res.data.results);
+    }
+    getPokemonAsync();
+  }, [])
 
   return (
     <ThemeProvider theme={theme}>
