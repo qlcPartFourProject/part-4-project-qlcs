@@ -119,8 +119,21 @@ const HomePage = () => {
       />
     <Button 
       onClick={() => navigate('/quiz/123')}
+      sx={{
+        textTransform: 'none',
+        color: Colour.Secondary.L0,
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'fixed',
+        left: '0',
+        bottom: '0'
+      }}
       >
-      Test Navigate
+      <Typography
+        sx={{
+          textDecoration: 'underline',
+        }}
+        >Test navigate</Typography>
     </Button>
     </>    
   )
