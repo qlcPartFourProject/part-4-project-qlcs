@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Program } from "../../../../../../models/ProgramFile";
 import { Colour } from "../../../../../../utils/colour/Colour";
 
 export const sx = {
     container: {
-        getStyle: (programFile: Program | undefined, error: boolean) => {
+        getStyle: () => {
             return {
                 borderRadius: '.5rem',
                 position: 'relative',

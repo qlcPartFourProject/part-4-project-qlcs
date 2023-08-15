@@ -43,7 +43,7 @@ const FileUpload = ({ programFile, removeOnClick, fileOnChange, error }: FileUpl
 
     return (
         <Box 
-            sx={sx.container.getStyle(programFile, error)} 
+            sx={sx.container.getStyle()} 
             className={error ? 'shake' : ''}
             >
             <Box sx={sx.uploadFileBg.getStyle()}>

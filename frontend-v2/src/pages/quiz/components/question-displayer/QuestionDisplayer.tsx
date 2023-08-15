@@ -7,7 +7,6 @@ import { sx } from './styles'
 import { QuestionSlider } from './components/question-slider/QuestionSlider'
 import QuizIcon from '@mui/icons-material/Quiz'
 import { Colour } from '../../../../utils/colour/Colour'
-import { QUIZ_DURATION } from '../../../../utils/constants/constants'
 import { useQuizStatusContext } from '../../../../contexts/QuizContext'
 import { QuizStatus } from '../../../../utils/enums/QuizStatus'
 

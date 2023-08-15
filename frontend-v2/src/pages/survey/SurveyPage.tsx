@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Box } from '@mui/material'
 import { sx } from './styles'
-import { useLocation, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { CreateSubmission } from '../../dtos/submission/CreateSubmission'
 import { UserSubmissionContext } from '../../contexts/UserSubmissionContext'
 import { QuizStatus } from '../../utils/enums/QuizStatus'
@@ -177,7 +177,8 @@ const SurveyPage = () => {
   // initialize user submission
   useEffect(() => {
     if (quiz) {
-      setUserSubmission((prev) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      setUserSubmission((prev: any) => {
         if (prev) {
           return prev
         } else {

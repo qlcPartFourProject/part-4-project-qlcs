@@ -21,7 +21,6 @@ const QuizPage = () => {
   )
   const quizType = QuizType.QLC
   const [userSubmission, setUserSubmission] = useState<CreateSubmission>()
-  const [showSummary, setShowSummary] = useState<boolean>(false)
   const submissionMethod = insertQuizSubmissionAsync
 
   // initialize quiz based on id specified in path param

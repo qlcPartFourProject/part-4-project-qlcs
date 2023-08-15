@@ -1,6 +1,6 @@
 import { Backdrop, Button, Fade, Modal, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import { useState, useContext, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Program } from '../../../../models/ProgramFile'
 import { sx } from './styles'
@@ -49,6 +49,7 @@ const NewQuizModal = ({ show, handleClose }: NewQuizModalProps) => {
     if (fileFormat === 'py') {
       const newProgramFile = {
         _id: '0',
+        authorId: '0',
         file,
       }
       setProgramFile(newProgramFile)

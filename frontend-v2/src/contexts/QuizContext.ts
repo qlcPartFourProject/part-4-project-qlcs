@@ -10,7 +10,7 @@ interface QuizContextType {
 
 const defaultQuizContext = {
   quizStatus: QuizStatus.NOT_STARTED,
-  setQuizStatus: (quizStatus: QuizStatus) => {},
+  setQuizStatus: (quizStatus: QuizStatus) => { console.log(quizStatus) },
   quizType: QuizType.QLC,
 }
 

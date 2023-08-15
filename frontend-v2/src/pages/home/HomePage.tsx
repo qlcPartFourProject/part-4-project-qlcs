@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Alert, Box, Button, Card, CardContent, Typography } from '@mui/material'
+import { Box, Button, Typography } from '@mui/material'
 import NewQuizModal from './components/new-quiz-modal/NewQuizModal'
 import { styles, sx } from './styles'
 import CatWithLaptop from './components/cat-with-laptop/CatWithLaptop'

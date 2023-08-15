@@ -19,8 +19,8 @@ const defaultUserSubmissionContext = {
       | CreateSubmission
       | ((prev: CreateSubmission | undefined) => CreateSubmission | undefined)
       | undefined
-  ) => {},
-  submissionMethod: async (userSubmission: CreateSubmission) => {},
+  ) => { console.log(userSubmission) },
+  submissionMethod: async (userSubmission: CreateSubmission) => { console.log(userSubmission) },
 }
 
 export const UserSubmissionContext = createContext<UserSubmissionContextType>(

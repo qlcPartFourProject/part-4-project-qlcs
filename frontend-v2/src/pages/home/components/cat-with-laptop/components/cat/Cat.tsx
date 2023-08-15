@@ -95,15 +95,15 @@ const Tail = () => {
     useEffect(() => {
         if (tailIndex === 0) {
             const delayOffset = Math.random() * 4000;
-            tail.forEach((t,i) => {
-                let delay = delayOffset + 2000 + 200 * i;
+            tail.forEach((_t,i) => {
+                const delay = delayOffset + 2000 + 200 * i;
                 setTimeout(() => handleMoveTailUp(), delay)
             });
         }
         else if (tailIndex === tail.length-1){
             const delayOffset = Math.random() * 1000;
-            tail.reverse().forEach((t,i) => {
-                let delay = delayOffset + 500 + (300 * i);
+            tail.reverse().forEach((_t,i) => {
+                const delay = delayOffset + 500 + (300 * i);
                 setTimeout(() => handleMoveTailDown(), delay)
             });
         }

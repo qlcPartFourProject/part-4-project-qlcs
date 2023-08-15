@@ -12,7 +12,8 @@ interface SliderIndicatorProps {
     setQuestionsVisited: (questionsVisited: number[]) => void,
 }
 
-export const SliderIndicator = ({ numQuestions, currentQuestionNum, setCurrentQuestionNum, questionsVisited, setQuestionsVisited }: SliderIndicatorProps) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const SliderIndicator = ({ numQuestions, currentQuestionNum, setCurrentQuestionNum, questionsVisited }: SliderIndicatorProps) => {
     const { userSubmission } = useUserSubmissionContext();
     
     const renderIndicatorButtons = () => {
