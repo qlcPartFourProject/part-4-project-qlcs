@@ -1,1 +1,0 @@
-export const QUIZ_DURATION = 5 * 60; // in seconds
