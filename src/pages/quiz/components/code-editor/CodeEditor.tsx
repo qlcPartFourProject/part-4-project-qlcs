@@ -39,7 +39,7 @@ const CodeEditor = ({ programId }: CodeEditorProps) => {
         reader.onload = async (e) => {
           const text = e.target?.result
           if (text) {
-            const textSplitArr = (text as string).split(/\r?\n/)
+            const textSplitArr = (text as string).trim().split(/\r?\n/)
             setFileLines(textSplitArr)
           }
           setEntireText(text as string)
@@ -53,9 +53,7 @@ const CodeEditor = ({ programId }: CodeEditorProps) => {
   const editorFontSize = '1rem'
 
   return (
-    <Box sx={sx.codeEditor} 
-      data-aos="fade-left"
-      >
+    <Box sx={sx.codeEditor} data-aos="fade-left">
       <Box>
         <Box
           sx={{
@@ -115,12 +113,12 @@ const CodeEditor = ({ programId }: CodeEditorProps) => {
               fontSize={editorFontSize}
               numberOfLines={programLines.length}
               height={`${programLines.length * 1.5 + 2}rem`}
-              />
+            />
             <Code
               fontSize={editorFontSize}
               text={entireText}
               height={`${programLines.length * 1.5 + 2}rem`}
-              />
+            />
           </ThemeProvider>
         </Box>
       </Box>
