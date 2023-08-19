@@ -39,18 +39,35 @@ const TermsAndConditions = ({
             }}
             >
             <Box
-                sx={{
-                    // outline: '1px solid black',
-                    // pb: '3rem'
-                }}
+                display='flex'
+                flexDirection='row'
+                justifyContent='space-between'
                 >
                 <Box
                     component='img'
                     src={CompsciLogo}
                     sx={{
-                        height: '7rem'
+                        height: '7rem',
                     }}
                     />
+                <Box>
+                    <Typography>Room 405, Level 4</Typography>
+                    <Typography>Science Centre Building 303</Typography>
+                    <Typography>38 Princes Street</Typography>
+                    <Typography>Auckland 1010</Typography>
+                </Box>
+                <Box>
+                    <Typography>Phone: +64 9 373 7599 ext 82930</Typography>
+                    <Typography>Fax: + 64 9373 7453</Typography>
+                    <Typography>Email: office@cs.auckland.ac.nz</Typography>
+                </Box>
+                <Box>
+                    <Typography>School of Computer Science</Typography>
+                    <Typography>The University of Auckland</Typography>
+                    <Typography>Private Bag 92019</Typography>
+                    <Typography>Auckland 1142</Typography>
+                    <Typography>New Zealand</Typography>
+                </Box>
             </Box>
             <Typography variant='h3'>Participant Information Sheet</Typography>
             <Box>
