@@ -56,7 +56,7 @@ const ParticipantInformation = () => {
           }
           body={[
             'Any information gathered during this study will be saved securely on Firebase. All responses to the questionnaire are anonymous, so you will not be able to withdraw your data once it has been provided.',
-            'If you wish to receive a summary of the result, please email Ewan (contact information below).  Your email address will not be linked to your collected data.',
+            'If you wish to receive a summary of the results, please email Ewan (contact information below).  Your email address will not be linked to your collected data.',
           ]}
         />
         <SubSection
