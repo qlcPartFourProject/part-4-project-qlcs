@@ -95,7 +95,7 @@ const ContactDetails = () => {
                   variant="body2"
                   color="text.primary"
                 >
-                  Principal Investigator{dot}022 158 2076{dot}
+                  Principal Investigator{dot}(+64) 22 158 2076{dot}
                   atan958@aucklanduni.ac.nz
                 </Typography>
               }
@@ -111,7 +111,7 @@ const ContactDetails = () => {
                   variant="body2"
                   color="text.primary"
                 >
-                  Principal Investigator{dot}021 0283 2813{dot}
+                  Principal Investigator{dot}(+64) 21 0283 2813{dot}
                   nyao974@aucklanduni.ac.nz
                 </Typography>
               }

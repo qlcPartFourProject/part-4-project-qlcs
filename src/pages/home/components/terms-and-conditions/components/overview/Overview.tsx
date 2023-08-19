@@ -98,6 +98,10 @@ const Overview = () => {
                 >
                 <Typography
                     variant='h5'
+                    sx={{mb:'1rem'}}
+                    >Project Title: Questions on Learner's Code</Typography>
+                <Typography
+                    variant='h5'
                     >Research Team</Typography>
                 <Box
                     sx={{
