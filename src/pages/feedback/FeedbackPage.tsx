@@ -20,6 +20,7 @@ const FeedbackPage = () => {
         quizId: quizId,
         text: feedbackText,
       })
+      alert('Your feedback has been received!')
     }
   }
 
