@@ -31,7 +31,7 @@ const FeedbackPage = () => {
         </Typography>
         <Typography color="white" variant="h6" sx={{ mt: '8px' }}>
           If you have any feedback or additional comments for us, please type
-          them into the box below
+          them into the box below. Otherwise, feel free to close the tab!
         </Typography>
         <Box sx={{ width: 600 }} display="flex" flexDirection="column">
           <TextField
