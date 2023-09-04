@@ -5,7 +5,8 @@
             "USER_ENDPOINT": "user/",
             "QUIZ_ENDPOINT": "quiz/",
             "PROGRAM_ENDPOINT": "program/",
-            "SURVEY_ENDPOINT": "survey/"
+            "SURVEY_ENDPOINT": "survey/",
+            "FEEDBACK_ENDPOINT": "feedback/"
         }
     }
 }

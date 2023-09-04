@@ -8,6 +8,7 @@ import bgImage from './assets/bg.svg'
 import HomePage from './pages/home/HomePage'
 import QuizPage from './pages/quiz/QuizPage'
 import SurveyPage from './pages/survey/SurveyPage'
+import FeedbackPage from './pages/feedback/FeedbackPage'
 
 import useAos from './hooks/useAos'
 import axios from 'axios'
@@ -51,6 +52,7 @@ function App() {
           <Route path="/login" element={<Navigate to="/" />} />
           <Route path="/quiz/:id" element={<QuizPage />} />
           <Route path="/survey/:id" element={<SurveyPage />} />
+          <Route path="/feedback/:id" element={<FeedbackPage />}></Route>
         </Routes>
       </Box>
     </ThemeProvider>
