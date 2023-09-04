@@ -81,6 +81,9 @@ export const QuestionSlider = ({
       submissionMethod(userSubmission)
       handleCloseConfirmSubmit()
       setQuizStatus(QuizStatus.HAS_FINISHED)
+      if (quizType === QuizType.SURVEY) {
+        navigate(`/feedback/${quizId}`)
+      }
     }
   }
 
@@ -164,12 +167,16 @@ export const QuestionSlider = ({
         message={`You have ${getNumUnansweredQuestions()} unanswered questions.`}
         show={showConfirmSubmit}
       />
-      <QuizSummaryModal
-        handleClose={handleCloseQuizSummary}
-        handleTakeSurvey={handleOpenSurvey}
-        show={showQuizSummary}
-        questions={questions}
-      />
+      {
+        quizType === QuizType.QLC && 
+          <QuizSummaryModal
+            handleClose={handleCloseQuizSummary}
+            handleTakeSurvey={handleOpenSurvey}
+            show={showQuizSummary}
+            questions={questions}
+          />
+      }
+      
     </Box>
   )
 }
