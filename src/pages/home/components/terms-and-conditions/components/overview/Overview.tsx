@@ -86,6 +86,11 @@ const Overview = () => {
                 expandIcon={<ExpandMoreIcon/>}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                sx={{
+                    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
+                      transform: 'rotate(90deg)',
+                    },
+                  }}
                 >
                 <Typography
                     variant='h4'
