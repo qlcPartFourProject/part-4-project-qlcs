@@ -11,6 +11,7 @@ export const sx = {
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
+    rowGap: '2rem',
     // outline: '1px solid white',
     py: '3rem',
   },
@@ -24,5 +25,6 @@ export const sx = {
     },
     textTransform: 'none',
     mt: '16px',
+    maxWidth: '12rem'
   },
 }
