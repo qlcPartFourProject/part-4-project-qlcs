@@ -6,14 +6,11 @@ import CatWithLaptop from './components/cat-with-laptop/CatWithLaptop'
 import { Colour } from '../../utils/colour/Colour'
 import Checkbox from '@mui/material/Checkbox'
 import TermsAndConditions from './components/terms-and-conditions/TermsAndConditions'
-import { useNavigate } from 'react-router-dom'
 
 const HomePage = () => {
   const [showNewQuizModal, setShowNewQuizModal] = useState<boolean>(false);
   const [showTac, setShowTac] = useState<boolean>(false);
   const [tacAccepted, setTacAccepted] = useState<boolean>(false);
-
-  const navigate = useNavigate();
 
   const handleOpenModal = () => setShowNewQuizModal(true);
   const handleCloseModal = () => setShowNewQuizModal(false);
@@ -117,24 +114,6 @@ const HomePage = () => {
       show={showNewQuizModal}
       handleClose={handleCloseModal}
       />
-    <Button 
-      onClick={() => navigate('/quiz/123')}
-      sx={{
-        textTransform: 'none',
-        color: Colour.Secondary.L0,
-        display: 'flex',
-        flexDirection: 'column',
-        position: 'fixed',
-        left: '0',
-        bottom: '0'
-      }}
-      >
-      <Typography
-        sx={{
-          textDecoration: 'underline',
-        }}
-        >Test navigate</Typography>
-    </Button>
     </>    
   )
 }
