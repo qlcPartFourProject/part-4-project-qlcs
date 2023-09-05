@@ -152,11 +152,15 @@ export const QuestionForm = ({
           <Typography sx={{ width: '3.75rem', fontSize: '1.2rem' }}>
             {`Q${questionNum}.`}
           </Typography>
-          <Typography
-            sx={{ width: 'calc(100% - 3.75rem)', fontSize: '1.2rem' }}
-          >
-            {question?.text}
-          </Typography>
+          <Box flexDirection="column" sx={{ width: '100%' }}>
+            {question.text.split('\n').map((line) => (
+              <Typography
+                sx={{ width: 'calc(100% - 3.75rem)', fontSize: '1.2rem' }}
+              >
+                {line}
+              </Typography>
+            ))}
+          </Box>
         </Box>
         <Box sx={sx.choices}>{renderChoices()}</Box>
       </Box>
