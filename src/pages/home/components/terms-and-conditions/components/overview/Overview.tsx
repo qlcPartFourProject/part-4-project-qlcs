@@ -120,7 +120,7 @@ const Overview = () => {
                     {renderTeamMembers()}
                 </Box>
                 <Typography>
-                    Our names are Angelo Tangonan and Nicholas Yao and we would like to invite you to take part in a research study. Before you decide whether to participate, you need to understand why the research is being done and what it would involve for you. Please take time to read the following information carefully. Ask questions if anything you read is not clear or if you would like more information. Take time to decide whether or not you wish to take part.
+                    Our names are Angelo Tangonan and Nicholas Yao and we would like to invite you to take part in a research study. Before you decide whether to participate, you need to understand why the research is being done and what it would involve for you. Please take time to read the following information carefully. Ask questions if anything you read is not clear or if you would like more information. If you prefer, a kanohi-ki-te-kanohi meeting can be arranged after first contact to answer any questions you might have. Take time to decide whether or not you wish to take part.
                 </Typography>
             </AccordionDetails>
         </Accordion>
