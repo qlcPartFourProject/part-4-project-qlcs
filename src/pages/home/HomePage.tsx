@@ -106,6 +106,9 @@ const HomePage = () => {
                   }}
                   />
               </Box>
+              <Typography>
+                  Submission of the questionnaire will be taken as consent.
+              </Typography>
           </Box>
         </Box>
       </Box>
