@@ -76,6 +76,9 @@ const HomePage = () => {
               onClick={handleOpenModal}
               disabled={!tacAccepted}
               >New Quiz</Button>
+            <Typography>
+                Before you start, please read and agree to the Particiant Information Sheet:
+            </Typography>
             <Box
               sx={{
                   // outline: '1px solid black',
