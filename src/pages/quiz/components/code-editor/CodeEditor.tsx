@@ -39,10 +39,14 @@ const CodeEditor = ({ programId }: CodeEditorProps) => {
         reader.onload = async (e) => {
           const text = e.target?.result
           if (text) {
-            const textSplitArr = (text as string).trim().split(/\r?\n/)
+            const trimmedText = (text as string).trim()
+            const textSplitArr = trimmedText.split(/\r?\n/)
             setFileLines(textSplitArr)
+            setEntireText(trimmedText)
+          } else {
+            setEntireText(text as string)
           }
-          setEntireText(text as string)
+          
         }
         reader.readAsText(p.file!, 'UTF-8')
       }
