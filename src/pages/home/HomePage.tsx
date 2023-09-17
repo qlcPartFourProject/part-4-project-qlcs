@@ -76,42 +76,55 @@ const HomePage = () => {
               onClick={handleOpenModal}
               disabled={!tacAccepted}
               >New Quiz</Button>
-            <Typography>
-                Before you start, please read and agree to the Particiant Information Sheet:
-            </Typography>
+
             <Box
               sx={{
                   // outline: '1px solid black',
                   display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
+                  justifyContent: 'start',
+                  alignItems: 'start',
+                  width: '100%'
               }}
               >
-              <Typography
+                <Box
                 sx={{
-                  textDecoration: 'underline',
-                  cursor: 'pointer',
-                  color: Colour.Secondary.L2,
-                  ':hover': {
-                    color: Colour.Secondary.L1,
-                  },
-                  ':active': {
-                    color: Colour.Secondary.L2,
-                  }
+
                 }}
-                onClick={() => setShowTac(prev => !prev)}
-                >Participant Information Sheet</Typography>
+                >
               <Checkbox 
                   checked={tacAccepted}
                   onClick={handleTacOnClick}
                   style={{
-                      transition: '1s ease'
+                      transition: '1s ease',
                   }}
                   />
+                </Box>
+              <Box>
+                <Typography
+                  fontWeight='500'
+                  fontSize='1.2rem'
+                  sx={{
+                    pt: 'calc(.2rem * 2)',
+                    textDecoration: 'underline',
+                    cursor: 'pointer',
+                    ':hover': {
+                      color: tacAccepted ? '' : Colour.Secondary.L1
+                    },
+                    ':active': {
+                      color: Colour.Secondary.L2
+                    }
+                  }}
+                  onClick={() => setShowTac(prev => !prev)}
+                  >Participant Information Sheet</Typography>
+                <Typography 
+                  fontWeight='300'
+                  fontSize='.9rem'
+                  >
+                  Before you start, please read and agree to the Participant Information Sheet. Submission of the questionnaire will be taken as consent. 
+                </Typography>
+                </Box>
               </Box>
-              <Typography>
-                  Submission of the questionnaire will be taken as consent.
-              </Typography>
+
           </Box>
         </Box>
       </Box>
@@ -125,6 +138,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-
-
