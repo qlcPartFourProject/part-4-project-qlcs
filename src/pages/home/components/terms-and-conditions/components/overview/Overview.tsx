@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Accordion, AccordionSummary, AccordionDetails, Typography, Box } from '@mui/material'
-import angeloImg from '../../../../../../assets/angelo-pfp.png'
+import angeloImg from '../../../../../../assets/angelo-pfp.jpg'
 import nicholasImg from '../../../../../../assets/nicholas-pfp.png'
 import ewanImg from '../../../../../../assets/ewan-pfp.png'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
