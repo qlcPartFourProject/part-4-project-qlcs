@@ -1,6 +1,6 @@
 {
     "SERVER": {
-        "BASE_URL": "http://127.0.0.1:5000/api/",
+        "BASE_URL": "https://qlc-part-4-project.azurewebsites.net/api/",
         "RESOURCE": {
             "USER_ENDPOINT": "user/",
             "QUIZ_ENDPOINT": "quiz/",
