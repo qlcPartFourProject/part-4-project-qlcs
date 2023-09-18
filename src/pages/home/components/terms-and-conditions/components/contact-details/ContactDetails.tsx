@@ -137,7 +137,7 @@ const ContactDetails = () => {
           title={'UAHPEC Chair contact details:'}
           body={[
             'For any queries regarding ethical concerns you may contact the Chair, The University of Auckland Human Participants Ethics Committee, Office of Research Strategy and Integrity, The University of Auckland, Private Bag 92019, Auckland 1142. Telephone 09 373-7599 ext. 83711. Email: humanethics@auckland.ac.nz',
-            'Approved by the University of Auckland Human Participants Ethics Committee on 3 March 2023 for three years. Reference Number UAHPEC26505.',
+            'Approved by the University of Auckland Human Participants Ethics Committee on ...... for three years. Reference Number UAHPEC26505.',
           ]}
         />
       </AccordionDetails>
