@@ -127,19 +127,21 @@ export const QuestionSlider = ({
             variant="contained"
             sx={sx.navigateButton}
             onClick={handlePrevOnClick}
+            startIcon={<NavigateBeforeIcon />}
           >
-            <NavigateBeforeIcon />
+            Previous Question
           </Button>
           <Button
             disabled={currentQuestionNum === questions.length}
             variant="contained"
             sx={sx.navigateButton}
             onClick={handleNextOnClick}
+            startIcon={<NavigateNextIcon />}
           >
-            <NavigateNextIcon />
+            Next Question
           </Button>
         </Box>
-        <Box>
+        <Box sx={{ml: '1rem'}}>
           {quizStatus === QuizStatus.HAS_FINISHED ? (
             quizType === QuizType.QLC ? (
               <Button
