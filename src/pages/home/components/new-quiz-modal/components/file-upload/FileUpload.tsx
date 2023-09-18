@@ -1,4 +1,4 @@
-import { IconButton, Typography } from '@mui/material'
+import { Button, IconButton, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useState, useEffect } from 'react'
 import { Program } from '../../../../../../models/ProgramFile'
@@ -16,13 +16,7 @@ interface FileUploadProps {
 }
 
 const FileUpload = ({ programFile, removeOnClick, fileOnChange, error }: FileUploadProps) => {
-    const [contentLoadedOnce, setLoadOnce] = useState(false);
     const [enableFileChange, setEnableFileChange] = useState<boolean>(true);
-
-    // added for file animation
-    useEffect(() => {
-        if (programFile) setLoadOnce(true);
-    }, [programFile]);
 
     useEffect(() => {
         if (!programFile) {
@@ -46,34 +40,33 @@ const FileUpload = ({ programFile, removeOnClick, fileOnChange, error }: FileUpl
             sx={sx.container.getStyle()} 
             className={error ? 'shake' : ''}
             >
-            <Box sx={sx.uploadFileBg.getStyle()}>
+            <Button sx={sx.uploadFileBg.getStyle()} component='label'
+                    onClick={removeOnClick}>
+                {!programFile && 
+                  <input 
+                      style={{ 
+                          display: 'none' 
+                      }} 
+                      type={enableFileChange ? "file" : ''}
+                      name='file' 
+                      onChange={handleFileChange} 
+                      hidden
+                      />}
                 <UploadFileIcon sx={{ fontSize: '2rem' }}/>
                 <Typography>Upload File</Typography>
-            </Box>
-            {contentLoadedOnce && 
-            <Box sx={sx.uploadFileContent.getStyle()} className={programFile ? 'grow' : 'fade-out'}>
-                <Box sx={sx.fileTypeLogoContainer.getStyle()}>
-                    <Box component='img'src={pythonLogo} sx={{ height: '4rem' }}/>
+            </Button>
+            {programFile && 
+                <Box sx={sx.uploadFileContent.getStyle()} className={programFile ? 'grow' : 'fade-out'}>
+                    <Box sx={sx.fileTypeLogoContainer.getStyle()}>
+                        <Box component='img'src={pythonLogo} sx={{ height: '4rem' }}/>
+                    </Box>
+                    <Box sx={sx.fileInfoContainer.getStyle()}>
+                        <Typography sx={{ width: '100%' }}>
+                            {programFile ? programFile.file!.name : '--'}
+                        </Typography>
+                    </Box>
                 </Box>
-                <Box sx={sx.fileInfoContainer.getStyle()}>
-                    <Typography sx={{ width: '100%' }}>
-                        {programFile ? programFile.file!.name : '--'}
-                    </Typography>
-                </Box>
-            </Box>}
-            <Box
-                sx={{
-                    // outline: '1px solid black',
-                    height: '4rem',
-                    width: '4rem',
-                    position: 'absolute',
-                    top: `calc(4rem / -2)`,
-                    right: `calc(4rem / -2)`,
-                    transition: '.4s ease',
-                    bgcolor: programFile ? '' : 'white',
-                    transform: `scale(${programFile ? 0 : 1})`
-                }}
-                />
+            }
                 <IconButton
                     component='label'
                     onClick={removeOnClick}
