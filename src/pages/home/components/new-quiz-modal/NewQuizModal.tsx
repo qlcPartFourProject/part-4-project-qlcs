@@ -19,6 +19,7 @@ interface NewQuizModalProps {
 const NewQuizModal = ({ show, handleClose }: NewQuizModalProps) => {
   const [programFile, setProgramFile] = useState<Program>()
   const [loading, setLoading] = useState<boolean>(false)
+  const [createQuizError, setCreateQuizError] = useState<boolean>(false)
   const [showHelperText, setShowHelperText] = useState<boolean>(false)
   const navigate = useNavigate()
 
@@ -34,7 +35,8 @@ const NewQuizModal = ({ show, handleClose }: NewQuizModalProps) => {
         if (quizId) {
           navigate(`/quiz/${quizId}`)
         } else {
-          console.log('Error: Failed to create quiz.')
+          setLoading(false)
+          setCreateQuizError(true)
         }
       }
       handleCreateQuizAsync()
@@ -157,14 +159,25 @@ const NewQuizModal = ({ show, handleClose }: NewQuizModalProps) => {
                   py: '.5rem',
                 }}
               >
-                <Typography
-                  sx={{
-                    opacity: showHelperText ? '1' : '0',
-                    transition: '0.2s ease',
-                  }}
-                >
-                  Please select a file.
-                </Typography>
+                {showHelperText && 
+                  <Typography
+                    sx={{
+                      transition: '0.2s ease',
+                    }}
+                  >
+                    Please select a file.
+                  </Typography>
+                }
+                {createQuizError && 
+                  <Typography
+                    sx={{
+                      opacity: createQuizError ? '1' : '0',
+                      transition: '0.2s ease',
+                    }}
+                  >
+                    An error occurred while creating the quiz. Please make sure the file you uploaded has valid syntax.
+                  </Typography>
+                }
               </Box>
             </Box>
           )}
