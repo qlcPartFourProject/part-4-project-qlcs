@@ -24,9 +24,11 @@ export const createQuizAsync = async (file: File): Promise<string | null> => {
         }
     };
 
-    const res = await axios.post(SERVER.QUIZ_ENDPOINT.slice(0,-1), formData, config);
+    const res = await axios.post(SERVER.QUIZ_ENDPOINT.slice(0,-1), formData, config).catch(function (error) {
+      return null
+    });
     
-    return res.status === 201 ? res.data.quizId : null;
+    return res?.status === 201 ? res.data.quizId : null;
 }
 
 export const insertQuizSubmissionAsync = async (userSubmission: CreateSubmission) => {
