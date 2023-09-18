@@ -24,7 +24,7 @@ export const createQuizAsync = async (file: File): Promise<string | null> => {
         }
     };
 
-    const res = await axios.post(SERVER.QUIZ_ENDPOINT.slice(0,-1), formData, config).catch(function (error) {
+    const res = await axios.post(SERVER.QUIZ_ENDPOINT.slice(0,-1), formData, config).catch(function () {
       return null
     });
     
