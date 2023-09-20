@@ -90,6 +90,13 @@ export const QuestionSlider = ({
   const getNumUnansweredQuestions = () =>
     userSubmission?.answers.filter((a) => a.choiceIds.length === 0).length
 
+  const getModalMessage = () => {
+    const numUnansweredQuestions = getNumUnansweredQuestions();
+    return numUnansweredQuestions === 0 ?
+      'Once you submit, you cannot change your answers.' : 
+      `You have ${numUnansweredQuestions} unanswered questions.`;
+  }
+
   return (
     <Box data-aos="zoom-in" sx={sx.slider}>
       <Box sx={sx.viewFrame}>
@@ -166,7 +173,7 @@ export const QuestionSlider = ({
       <ConfirmSubmitModal
         handleOnCancel={handleCloseConfirmSubmit}
         handleOnSubmit={handleSubmitQuiz}
-        message={`You have ${getNumUnansweredQuestions()} unanswered questions.`}
+        message={getModalMessage()}
         show={showConfirmSubmit}
       />
       {
