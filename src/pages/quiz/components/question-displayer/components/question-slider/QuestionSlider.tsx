@@ -92,7 +92,7 @@ export const QuestionSlider = ({
 
   const getModalMessage = () => {
     const numUnansweredQuestions = getNumUnansweredQuestions();
-    return numUnansweredQuestions === 0 ?
+    return (numUnansweredQuestions === 0 || !isQlcQuiz) ?
       'Once you submit, you cannot change your answers.' : 
       `You have ${numUnansweredQuestions} unanswered questions.`;
   }
