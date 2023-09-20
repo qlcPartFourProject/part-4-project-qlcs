@@ -33,15 +33,19 @@ export const sx = {
     alignItems: 'start',
     width: '75%',
     color: 'white',
-    // bgcolor: 'blue'
   },
   navigateButton: {
-    bgcolor: 'white',
-    color: Colour.Primary.L5,
+    color: 'white',
+    bgcolor: '',
     width: 'auto',
     ':hover': {
-      bgcolor: Colour.Secondary.L0,
+      color: Colour.Primary.L0
     },
+    ':active': {
+      color: Colour.Primary.L1
+    },
+    textTransform: 'none',
+    fontSize: '1rem',
   },
   submitQuizButton: {
     bgcolor: 'white',

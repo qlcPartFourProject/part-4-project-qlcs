@@ -1,7 +1,7 @@
 import { Box } from '@mui/system'
 import { Question } from '../../../../../../models/Quiz'
 import { sx } from './styles'
-import { Button, Typography } from '@mui/material'
+import { Button, Typography, Divider } from '@mui/material'
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useUserSubmissionContext } from '../../../../../../contexts/UserSubmissionContext'
@@ -131,19 +131,30 @@ export const QuestionSlider = ({
         <Box sx={{ display: 'flex', columnGap: '1rem' }}>
           <Button
             disabled={currentQuestionNum === 1}
-            variant="contained"
+            variant='text'
             sx={sx.navigateButton}
             onClick={handlePrevOnClick}
             startIcon={<NavigateBeforeIcon />}
+            disableRipple
           >
-            Previous Question
+            Prev Question
           </Button>
+          <Divider 
+            sx={{
+              bgcolor: 'white',
+              height: '2.5rem',
+              width: '2px'
+            }}
+            orientation='vertical'
+          />
           <Button
             disabled={currentQuestionNum === questions.length}
-            variant="contained"
+            // variant="contained"
+            variant='text'
             sx={sx.navigateButton}
             onClick={handleNextOnClick}
-            startIcon={<NavigateNextIcon />}
+            endIcon={<NavigateNextIcon />}
+            disableRipple
           >
             Next Question
           </Button>
