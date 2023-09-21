@@ -109,8 +109,14 @@ const NewQuizModal = ({ show, handleClose }: NewQuizModalProps) => {
                 fontSize: '1rem',
                 fontWeight: '400',
               }}
+              sx={{ mt: '12px' }}
             >
-              Submitted files must be in .py format
+              If you are in COMPSCI130:<br/>
+              Please upload your Ass.py file from the solitaire assignment.<br/><br/>
+              If you are in COMPSCI101:<br/>
+              Please upload your solution to the connect 4 assignment.<br/><br/>
+              If you wish to upload a different file, you may do so. For the best results, this file should have several different functions (preferably at least 3 or 4).<br/><br/>
+              Submitted files must be in .py format.
             </Typography>
           </Box>
           {loading ? (

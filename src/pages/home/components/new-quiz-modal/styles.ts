@@ -6,7 +6,6 @@ export const sx = {
         transform: 'translate(-50%, -50%)',
         maxWidth: '30rem',
         width: 'calc(34rem - 4rem)',
-        height: 'calc(28rem - 5rem)',
         bgcolor: 'background.paper',
         borderRadius: '.5rem',
         boxShadow: 24,
