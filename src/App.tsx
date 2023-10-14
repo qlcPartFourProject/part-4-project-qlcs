@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { Box } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material'
 import { Routes, Route, Navigate } from 'react-router-dom'
@@ -11,7 +10,6 @@ import SurveyPage from './pages/survey/SurveyPage'
 import FeedbackPage from './pages/feedback/FeedbackPage'
 
 import useAos from './hooks/useAos'
-import axios from 'axios'
 
 const theme = createTheme({
   typography: {
