@@ -29,14 +29,6 @@ const sx = {
 function App() {
   useAos()
 
-  useEffect(() => {
-    const getPokemonAsync = async () => {
-      const res = await axios.get('https://pokeapi.co/api/v2/pokemon');
-      console.log(res.data.results);
-    }
-    getPokemonAsync();
-  }, [])
-
   return (
     <ThemeProvider theme={theme}>
       <Box
